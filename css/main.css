@@ -1,0 +1,197 @@
+.linkFrames{
+  margin: auto;
+  margin-top: 20px;
+  width: 850px;
+}
+
+.bigLink{
+  z-index: 2;
+  text-decoration: none;
+  position: relative;
+  padding: 15px;
+  padding-right: 400px;
+  background: #a6d3c8;
+}
+.bigLink::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+.bigLink span{
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  transform: translateY(-6px);
+}
+#topImage{
+  height: 700px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#topImage > img{
+  height: 100%;
+}
+
+
+.detailFrame{
+  position: relative;
+  z-index: 1;
+  margin: -5px 20px 0px 20px;
+  width: 800px;
+  height: 280px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 5px solid #a6d3c8;
+}
+#campasLink iframe{
+  position: absolute;
+  border-radius: 10px;
+  width:100%;
+  height:100%;
+}
+
+.detailFrame > a{
+  position: absolute;
+  transform: translate(700px, 245px);
+  text-decoration: none;
+}
+.randomProject {
+  text-align: center;
+  width : 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.randomProject img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  vertical-align: bottom;
+}
+
+.nowProject {
+  text-align: center;
+  width : 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.nowProject img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  vertical-align: bottom;
+}
+
+#aboutProN{
+  height: 135px;
+}
+#aboutText{
+  margin: 10px;
+  margin-top: 25px;
+}
+#aboutText h6{
+  margin-left: 14px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#aboutNazotoki{
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(255, 113, 137);
+}
+#remainingText{
+  margin-bottom: 0.5rem;
+}
+#remainingText h5{
+  display: inline;
+}
+#remainingNumb{
+  color:#ff007f;
+  margin: 10px;
+}
+
+/* スマホ対応〜 */
+
+@media screen and (max-width: 768px) {
+  .detailFrame{
+    width: 700px;
+  }
+  .linkFrames{
+    width: 730px;
+  }
+  .detailFrame > a{
+    transform: translate(605px, 245px);
+  }
+}
+@media screen and (max-width: 425px) {
+  #topImage{
+    height: 300px;
+  }
+  #linkFrames{
+    width: 250px;
+  }
+  #aboutNazotoki h5{
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  #aboutNazotoki{
+    margin-top: 15px;
+    color: rgb(255, 113, 137);
+  }
+  #remainingText{
+    margin-bottom: 2px;
+  }
+  
+  .bigLink{
+    padding-right: 280px;
+  }
+  .bigLink::before{
+    border-right: solid 10px rgb(149, 158, 155);
+  }
+  .bigLink span{
+    font-size: 20px;
+  }
+
+  #remainingNumb{
+    margin: 5px;
+  }
+
+  .detailFrame{
+    width: 280px;
+    height: 880px;
+    margin: -5px 10px 0px 10px;
+  }
+  .detailFrame > a{
+    position: absolute;
+    transform: translate(180px, 840px);
+    text-decoration: none;
+  }
+  .linkFrames{
+    width: 300px;
+  }
+  #aboutProN{
+    height: 205px;
+  }
+  #aboutText{
+    margin-top: 15px;
+  }
+  #aboutText h4{
+    font-size: 20px;
+  }
+  #aboutText h6{
+    font-size: 15px;
+    margin-left: 10px;
+  }
+}

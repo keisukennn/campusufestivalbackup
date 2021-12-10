@@ -1,0 +1,68 @@
+/* 親要素の判定無効にして子要素のを有効にすると親要素のhover判定が子要素のとこの分になる(らしい) */
+.nav-item{
+  pointer-events: none;
+}
+.nav-link {
+  pointer-events: auto;
+}
+
+/* 今いる場所に下線的なのを。 */
+.nav-item.active {
+  border-bottom: solid 2px rgba(255,255,255,.75);
+}
+.nav-item.active:hover {
+  border-color: rgba(255,255,255,1);
+}
+
+/* ドロップダウン系 */
+.hasDropDown div{
+  display: flex;
+}
+.dropDown {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  width: 150px;
+}
+.dropDownButton{
+  pointer-events: all;
+  color: rgba(255,255,255,.75);
+  background: none;
+  border: none;
+  pointer-events: auto;
+}
+.nav-item.active:hover .dropDownButton{
+  color: rgba(255,255,255,1);
+}
+.dropDownButton:hover .nav-item.active {
+  color: rgba(255,255,255,1);
+}
+.dropDownButton:focus{
+  outline: none;
+}
+.dropDown-item {
+  pointer-events: all;
+  background-color: #a6d3c8d8;
+  height: 30px;
+}
+.dropDown-item a{
+  margin: auto;
+  margin-left: 6px;
+  text-decoration: none;
+  color: rgba(255,255,255,.75);
+}
+.dropDown-item a:hover{
+  color: rgba(255,255,255,1);
+}
+
+/* 色〜 */
+.navbar{
+  background-color: #a6d3c8;
+}
+.navbar-dark .navbar-nav .nav-link{
+  color: rgba(255,255,255,.75);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: rgba(255,255,255,1);
+}
